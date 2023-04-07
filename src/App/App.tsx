@@ -1,11 +1,16 @@
 import React from 'react';
 
+import EmiDetailContextProvider from '../hooks/emiProvider';
+
 import LandingView from '../views/landing-view/LandingView';
+
 
 function App() {
   return (
     <div className="App">
-      <LandingView />
+      <EmiDetailContextProvider>
+        <LandingView />
+      </EmiDetailContextProvider>
     </div>
   );
 }

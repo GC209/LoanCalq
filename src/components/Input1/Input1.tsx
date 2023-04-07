@@ -10,7 +10,10 @@ interface InputInterface {
 
 const Input1 = ({label,type,id,placeholder,onChange}:InputInterface):JSX.Element => {
 
-
+  let step = '';
+  if (type === "number") {
+    step = "any";
+  }
   return (
     <div className="form-group">
       <label>{label}</label>
@@ -19,7 +22,8 @@ const Input1 = ({label,type,id,placeholder,onChange}:InputInterface):JSX.Element
         className="form-control"
         id={id}
         placeholder={placeholder}
-        onChange={ onChange}
+        onChange={onChange}
+        step={step}
       />
     </div>
   )

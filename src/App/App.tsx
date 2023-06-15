@@ -1,16 +1,16 @@
 import React from 'react';
 
-import EmiDetailContextProvider from '../hooks/emiProvider';
+// import EmiDetailContextProvider from '../hooks/emiProvider';
 
-import LandingView from '../views/landing-view/LandingView';
+// import LandingView from '../views/landing-view/LandingView';
 
 
 function App() {
   return (
     <div className="App">
-      <EmiDetailContextProvider>
+      {/* <EmiDetailContextProvider>
         <LandingView />
-      </EmiDetailContextProvider>
+      </EmiDetailContextProvider> */}
     </div>
   );
 }

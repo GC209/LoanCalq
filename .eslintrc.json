@@ -1,0 +1,35 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/prop-types": "off", // Disable prop-types for TypeScript projects
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Allow implicit return types in functions
+    "@typescript-eslint/no-explicit-any": "off", // Allow the use of the 'any' type
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // Ignore unused variables prefixed with '_'
+    "react-hooks/rules-of-hooks": "error", // Enforce rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Check dependencies of Hooks
+    "indent": ["error", 2, { "SwitchCase": 1 }], // Enforce consistent indentation (2 spaces)
+    "quotes": ["error", "single"], // Enforce single quotes
+    "semi": ["error", "always"], // Enforce semicolons at the end of statements
+    "comma-dangle": ["error", "always-multiline"], // Require trailing commas in multiline object/array
+    "object-curly-spacing": ["error", "always"], // Enforce spaces inside curly braces of objects
+    "array-bracket-spacing": ["error", "always"], // Enforce spaces inside brackets of arrays
+    "react/jsx-uses-react": "off", // Remove warning about 'react' import in JSX files
+    "react/react-in-jsx-scope": "off" // Remove warning about 'React' import in JSX files (automatically detected in TypeScript)
+  }
+}

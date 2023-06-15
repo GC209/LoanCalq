@@ -3,6 +3,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 
+
 const NavigationBar = () => {
   return (
     <div>

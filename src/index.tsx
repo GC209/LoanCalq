@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import NavigationBar from './Root/NavigationBar/NavigationBar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -13,7 +15,17 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />}>
+          {/* <Route path="/component1" element={<Component1 />}>
+            <Route path="subcomponent1" element={<Subcomponent1 />} />
+            <Route path="subcomponent2" element={<Subcomponent2 />} />
+          </Route>
+          <Route path="/component2" element={<Component2 />} /> */}
+        </Route>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
